@@ -288,6 +288,13 @@ This implementation builds on [ConceptGraphs](https://github.com/concept-graphs/
 
 Released under the [MIT License](LICENSE). Portions derived from ConceptGraphs retain its original MIT notice; see [NOTICE](NOTICE).
 
+##  More Words
+
+This codebase was originally developed on top of [ConceptGraphs](https://concept-graphs.github.io/) (2024). Since then, 3D scene understanding pipelines have evolved rapidly, and the current implementation may not directly align with more recent pipelines.
+
+ Nevertheless, we believe the core **ReShot mechanism** remains a useful and general idea. As also discussed during the review process, ReShot is not necessarily limited to point-cloud-based representations and could potentially be integrated with other scene representations, such as **3D Gaussian Splatting (3DGS)**. We hope this repository can serve as a reference for exploring these directions.
+
+
 ## Our Recent Work on 3D Scene Graphs
 If you are interested in more recent developments from us on **3D Scene Graphs (3DSGs)**, we recommend checking out:
 
