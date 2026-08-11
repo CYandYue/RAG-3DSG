@@ -1,0 +1,20 @@
+# Interactive visualization for the public Replica room0 demo.
+# Relative paths are resolved from the repository root.
+result_path: outputs/Replica/replica_demo/room0/node_rag3dsg/objects/node_objects.pkl.gz
+edge_file: outputs/Replica/replica_demo/room0/edge_rag3dsg/json_file/final_relations.json
+
+# Optional scene filters. Leave null to visualize every object.
+filter_object_ids: null
+min_center_z: null
+max_center_z: null
+
+voxel_size: 0.01
+node_radius: 0.10
+edge_radius: 0.02
+node_color: [0.0, 0.0, 1.0]
+edge_color: [1.0, 0.0, 0.0]
+ignored_relations: [none of these, FAIL]
+
+window_width: 1280
+window_height: 720
+point_size: 2.0

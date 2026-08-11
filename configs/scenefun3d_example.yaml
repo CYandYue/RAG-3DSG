@@ -1,0 +1,111 @@
+# Public one-sequence SceneFun3D configuration. Paths are relative to the repository root.
+run_id: scenefun3d_example
+
+Dataset:
+  name: SceneFun3D
+  config_path: rag3dsg/dataset/configs/scenefun3d.yaml
+  start: 0
+  end: -1
+  stride: 2
+  basedir: data/SceneFun3D
+  sequence: dev_420683_42445135
+  desired_height: 1440
+  desired_width: 1920
+
+SAM:
+  name: SAM
+  encoder_version: vit_h
+  checkpoint: checkpoints/sam_vit_h_4b8939.pth
+  points_per_side: 12
+  points_per_batch: 144
+  pred_iou_thresh: 0.88
+  stability_score_thresh: 0.95
+  crop_n_layers: 0
+  min_mask_region_area: 100
+
+CLIP:
+  encoder_version: ViT-H-14
+  checkpoint: laion2b_s32b_b79k
+  use_amp: true
+  precision: fp32
+
+Detection:
+  basedir: outputs
+
+Filter:
+  mask_min_area_threshold: 25
+  mask_min_conf_threshold: 0.95
+  bbox_max_area_ratio: 0.5
+  pc_min_num_threshold: 22
+  downsample_voxel_size: 0.01
+  use_dbscan: true
+  dbscan_eps: 0.1
+  dbscan_min_points: 10
+  denoise_object_interval: 20
+  merge_object_interval: 20
+  detection_min_num_thershold: 3
+  merge_overlap_threshold: 0.5
+  merge_visual_sim_threshold: 0.6
+  distance_threshold_factor: 1.5
+  mask_min_detected_threshold: 2
+  use_small_mask_filter: true
+  small_mask_min_size: 70
+
+Similarity:
+  spatial_sim_type: nearest
+  aggregate_ratio: 0.5
+  final_sim_threshold: 0.45
+
+Result:
+  basedir: outputs
+  whole_suffix: rag3dsg
+  from_suffix: method
+  to_suffix: method
+
+Results:
+  basedir: outputs
+  from_suffix: method
+  to_suffix: rag3dsg
+
+Reshot:
+  samples: 64
+  visibility_weight: 0.6
+  horizontal_weight: 0.2
+  prior_weight: 0.2
+  top_k: 1
+
+Mask:
+  top_k_mask: 8
+  padding_size: 20
+
+Cluster:
+  n_clusters: 3
+
+RAG:
+  object_document_ratio: 0.5
+
+NodeCaption:
+  source_suffix: rag3dsg
+  output_suffix: rag3dsg
+
+GPT:
+  api_key_env: OPENAI_API_KEY
+  base_url_env: OPENAI_BASE_URL
+  base_url: https://api.openai.com/v1
+  timeout: 60
+  max_retries: 3
+  vision_model: gpt-4o-mini
+  text_model: gpt-4.1
+
+Threshold:
+  downsample_voxel_size: 0.01
+
+EdgeCaption:
+  node_suffix: rag3dsg
+  output_suffix: rag3dsg
+  prompt_strategy: rag3dsg
+
+Device: cuda:0
+
+Debug:
+  print_timing: false

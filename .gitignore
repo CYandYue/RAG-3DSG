@@ -1,0 +1,31 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+build/
+dist/
+
+# Local environments and credentials
+.env
+.env.*
+!.env.example
+.venv/
+venv/
+
+# Data, checkpoints, and generated artifacts
+data/
+checkpoints/
+outputs/
+results/
+*.pkl
+*.pkl.gz
+*.ply
+*.pcd
+
+# Editors and operating systems
+.DS_Store
+.idea/
+.vscode/

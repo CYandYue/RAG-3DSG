@@ -1,0 +1,47 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "rag3dsg"
+version = "0.1.0"
+description = "RAG-3DSG: Enhancing 3D Scene Graphs with Re-Shot Guided Retrieval-Augmented Generation"
+readme = "README.md"
+requires-python = ">=3.10,<3.11"
+license = {file = "LICENSE"}
+authors = [{name = "RAG-3DSG Authors"}]
+keywords = ["3D scene graph", "retrieval-augmented generation", "open vocabulary", "robotics"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3.10",
+  "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+dependencies = [
+  "imageio==2.37.0",
+  "kornia==0.8.1",
+  "matplotlib==3.10.7",
+  "natsort==8.4.0",
+  "networkx==3.4.2",
+  "numpy==1.25.0",
+  "open-clip-torch==2.20.0",
+  "open3d==0.19.0",
+  "openai==2.3.0",
+  "opencv-python==4.11.0.86",
+  "Pillow==11.1.0",
+  "PyYAML==6.0.2",
+  "rich==13.9.4",
+  "scikit-learn==1.2.2",
+  "scipy==1.15.3",
+  "supervision==0.21.0",
+  "tqdm==4.67.1",
+]
+
+[project.urls]
+Paper = "https://arxiv.org/abs/2601.10168"
+
+[tool.setuptools.packages.find]
+include = ["rag3dsg*"]
+
+[tool.setuptools.package-data]
+rag3dsg = ["dataset/configs/*.yaml"]

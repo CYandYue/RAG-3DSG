@@ -1,0 +1,23 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite the RAG-3DSG paper."
+title: "RAG-3DSG: Enhancing 3D Scene Graphs with Re-Shot Guided Retrieval-Augmented Generation"
+type: software
+version: 0.1.0
+authors:
+  - family-names: Chang
+    given-names: Yue
+  - family-names: Chen
+    given-names: Rufeng
+  - family-names: Zhang
+    given-names: Zhaofan
+  - family-names: Chen
+    given-names: Yi
+  - family-names: Tian
+    given-names: Yifan
+  - family-names: Xie
+    given-names: Sihong
+identifiers:
+  - type: url
+    value: "https://arxiv.org/abs/2601.10168"
+    description: "RAG-3DSG paper on arXiv"
+license: MIT
