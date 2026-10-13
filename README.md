@@ -2,14 +2,14 @@
 
 <div align="center">
 
-[**Paper**](https://arxiv.org/pdf/2601.10168) |
+[**Paper**](https://doi.org/10.1007/978-3-032-37350-2_13) |
 [**arXiv**](https://arxiv.org/abs/2601.10168) |
 [**Replica Demo**](#replica-room0-demo) |
 [**Citation**](#citation)
 
 Yue Chang, Rufeng Chen, Zhaofan Zhang, Yi Chen, Yifan Tian, Sihong Xie
 
-**Accepted by ECCV 2026**
+**ECCV 2026**
 
 </div>
 
@@ -272,11 +272,13 @@ python -m rag3dsg.graph.edge_caption --config configs/replica_example.yaml
 If you find this work useful, please cite:
 
 ```bibtex
-@article{chang2026rag,
-  title={RAG-3DSG: Enhancing 3D Scene Graphs with Re-Shot Guided Retrieval-Augmented Generation},
+@inproceedings{chang2026rag,
+  title={Rag-3dsg: Enhancing 3d scene graphs with re-shot guided retrieval-augmented generation},
   author={Chang, Yue and Chen, Rufeng and Zhang, Zhaofan and Chen, Yi and Tian, Yifan and Xie, Sihong},
-  journal={arXiv preprint arXiv:2601.10168},
-  year={2026}
+  booktitle={European Conference on Computer Vision},
+  pages={223--240},
+  year={2026},
+  organization={Springer}
 }
 ```
 
